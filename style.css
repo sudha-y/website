@@ -19,8 +19,10 @@ color:black;
 #hi{
   max-width:85%;
 font-family: 'Quicksand', sans-serif;
-
- 
+}
+#contactsec{
+   font-family: 'Satisfy', cursive;
+  font-size:30px;
 }
 #contact iframe
 {
