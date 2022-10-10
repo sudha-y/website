@@ -2,7 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    .box {
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box>* {
+          flex: 0 0 33.3333%;
+      }
 
+.box img{
+  height:50px;
+  width:50px;
+}
 
 body{
 background-image: url("https://cdn.wallpapersafari.com/69/67/e6XUxY.jpg");
@@ -194,7 +206,7 @@ background:none;
     color : white;
     font-size: 20px;
 }
-/* slideshow button */
+/* -----------slideshow button ---------*/
 button {
  position: relative;
  display: inline-block;
@@ -282,69 +294,88 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
  color: #fff;
 }
-.scene {
- width: 15em;
- justify-content: center;
- align-items: center;
+/*----------SKILL BOXES--------------*/
+.buttonskill {
+  --width: 100px;
+  --height: 25px;
+  --button-color: ;
+  width: var(--width);
+  height: 80px;
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: solid;
+  transition: background 0.3s;
 }
 
-.cube {
- color: #ccc;
- cursor: pointer;
- font-family: 'Roboto', sans-serif;
- transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
- transform-style: preserve-3d;
- transform-origin: 100% 50%;
- width: 6em;
- height: 3em;
+.buttonskill::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  background-color: var(--button-color);
+  font-size: 0.9rem;
+  color: #111;
 }
 
-.cube:hover {
- transform: rotateX(-90deg);
+.buttonskill::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--button-color);
 }
 
-.side {
- box-sizing: border-box;
- position: absolute;
- display: inline-block;
- height: 3em;
- width: 6em;
- text-align: center;
- text-transform: uppercase;
- padding-top: 1.5em;
- font-weight: bold;
+.buttonskill::after,.buttonskill::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
-.top {
- background: cyan;
- color: #222229;
- transform: rotateX(90deg) translate3d(0, 0, 2em);
- box-shadow: inset 0 0 0 5px #fff;
-}
-
-.front {
- background: ;
- color: #fff;
- box-shadow: inset 0 0 0 5px #fff;
- transform: translate3d(0, 0, 2em);
-}
-.cube img{
-height:55px;
-  width:56px;
-}
-/*-------------------*/
-.flex-container {
-  width: 90%;
+.textt {
   display: flex;
-  padding:0px;
-  background-color: ;
+  align-items: center;
+  justify-content: center;
 }
 
-.flex-container > div {
-  background-color: ;
-  width:100%;
-  margin: 1px;
+.button-wrapper,.textt,.iconn {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
 }
+
+.textt {
+  top: 0;
+}
+
+.textt,.iconn {
+  transition: top 0.45s;
+}
+
+.iconn {
+  color: #000;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonskill:hover {
+  background: #;
+}
+
+.buttonskill:hover .textt {
+  top: -100%;
+}
+
+.buttonskill:hover .iconn {
+  top: 0;
+}
+
 
 /*----------CERTIFICATES--------------*/
 .slideshow-container {
@@ -509,3 +540,18 @@ height:55px;
   background-color: #1a6cf0;
 }
 
+/*------- skills section css-------*/
+
+    .box {
+        width: 80%;
+      height:auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box>* {
+          flex: 0 0 36%;
+      }
+#skilll{
+  padding:20px;
+}
+  
