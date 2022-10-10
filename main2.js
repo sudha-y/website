@@ -56,5 +56,5 @@ function showSlides(n) {
 /* back to top button--------*/
 function GoToHomePage()
 {
-   window.location = 'https://sudha-y.github.io/website/personal.html';      
+   window.location = 'https://sudha-y.github.io/website/personal.html#';      
 }
