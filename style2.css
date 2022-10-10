@@ -296,11 +296,12 @@ button:hover .button-text {
 }
 /*----------SKILL BOXES--------------*/
 .buttonskill {
-  --width: 100px;
-  --height: 25px;
+     --width: 100px;
+  --height: 80px;
   --button-color: ;
-  width: var(--width);
+  width: 100px;
   height: 80px;
+  
   background: var(--button-color);
   position: relative;
   text-align: center;
