@@ -21,7 +21,7 @@ function change(){
 
 /* CAROUSEL*/
 
-var slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
